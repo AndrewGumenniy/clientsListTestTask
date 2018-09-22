@@ -5,6 +5,7 @@
 
 .clients-list-column {
     flex: 1;
+    border-right: 1px solid rgba(0,0,0,.12);
 }
 
 .about-client-column {

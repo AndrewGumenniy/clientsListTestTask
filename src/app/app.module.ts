@@ -9,6 +9,7 @@ import { ClientItemComponent } from './clients-list/client-item/client-item.comp
 import { ClientDetailComponent } from './clients-list/client-detail/client-detail.component';
 import { ClientSearchComponent } from './client-search/client-search.component';
 import { ClientsListDataService } from './shared/clients-list-data.service';
+import { AppMaterialModule } from './app-material.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ClientsListDataService } from './shared/clients-list-data.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppMaterialModule
   ],
   providers: [ClientsListDataService],
   bootstrap: [AppComponent]

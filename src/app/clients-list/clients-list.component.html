@@ -1,11 +1,11 @@
 <div class="container">
   <div class="clients-list-column">
     <app-client-search></app-client-search>
-    <app-client-item></app-client-item>
-    <div class="item" *ngFor="let client of clients">
-      <h1>{{client.firstName}} {{client.lastName}}</h1>
-      
-    </div>
+    <mat-list>
+      <app-client-item *ngFor="let client of clients"
+      [clientData]="client">
+      </app-client-item>
+    </mat-list>
   </div>
   <div class="about-client-column">
     <app-client-detail></app-client-detail>

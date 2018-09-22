@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Client } from '../../shared/client.model';
 
 @Component({
   selector: 'app-client-item',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-item.component.css']
 })
 export class ClientItemComponent implements OnInit {
-
+  @Input() clientData: Client;
   constructor() { }
 
   ngOnInit() {
