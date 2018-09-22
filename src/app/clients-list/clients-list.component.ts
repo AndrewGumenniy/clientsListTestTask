@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientsListDataService } from '../shared/clients-list-data.service';
+import { Client } from '../shared/client.model';
 
 @Component({
   selector: 'app-clients-list',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clients-list.component.css']
 })
 export class ClientsListComponent implements OnInit {
-
-  constructor() { }
+  clients: Client[];
+  constructor(private clientsDataSv: ClientsListDataService) { }
 
   ngOnInit() {
+    this.getClients();
+  }
+
+  getClients() {
+    this.clientsDataSv.getClients()
+    .subscribe(clients => this.clients = clients);
   }
 
 }

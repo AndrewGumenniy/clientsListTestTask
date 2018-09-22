@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.clients-list-column {
+    flex: 1;
+}
+
+.about-client-column {
+    flex: 3;
+}

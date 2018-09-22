@@ -1,7 +1,13 @@
-<div>
-  <app-client-search></app-client-search>
-  <app-client-item></app-client-item>
-</div>
-<div>
-  <app-client-detail></app-client-detail>
+<div class="container">
+  <div class="clients-list-column">
+    <app-client-search></app-client-search>
+    <app-client-item></app-client-item>
+    <div class="item" *ngFor="let client of clients">
+      <h1>{{client.firstName}} {{client.lastName}}</h1>
+      
+    </div>
+  </div>
+  <div class="about-client-column">
+    <app-client-detail></app-client-detail>
+  </div>
 </div>
