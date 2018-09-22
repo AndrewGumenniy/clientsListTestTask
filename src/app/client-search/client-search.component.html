@@ -1,8 +1,11 @@
 <form class="example-form">
-
     <mat-form-field class="example-full-width">
-      <input type="search" matInput placeholder="Client data">
+      <input #searchBox 
+      id="search-box" 
+      (keyup)="search(searchBox.value)" 
+      type="search" 
+      matInput 
+      placeholder="Client data">
       <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
-    
-  </form>
+    </mat-form-field>    
+</form>

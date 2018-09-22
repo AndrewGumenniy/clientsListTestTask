@@ -2,7 +2,18 @@
   <div class="clients-list-column">
     <app-client-search></app-client-search>
     <mat-list>
-      <app-client-item *ngFor="let client of clients"
+      <app-client-item *ngFor="let client of clients | filter:{ 
+        firstName: message, 
+        lastName: message,
+        company: message,
+        jobPosition:message,
+        email: message,
+        phone: message,
+        street: message,
+        city: message,
+        zipCode: message,
+        country: message
+      } : false"
       [clientData]="client"
       [selectedClient]="selectedClient"
       (click)="onSelect(client)">

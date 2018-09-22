@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from '../../../node_modules/rxjs';
+import { SearchService } from '../shared/search.service';
 
 @Component({
   selector: 'app-client-search',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private searchSv: SearchService) { }
 
   ngOnInit() {
   }
 
+  search(term: any): void {
+    this.searchSv.sendMessage(term);
+  }
 }

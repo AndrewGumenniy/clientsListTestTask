@@ -10,6 +10,7 @@ import { ClientDetailComponent } from './clients-list/client-detail/client-detai
 import { ClientSearchComponent } from './client-search/client-search.component';
 import { ClientsListDataService } from './shared/clients-list-data.service';
 import { AppMaterialModule } from './app-material.module';
+import { SearchFilterPipe } from './shared/search-filter.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AppMaterialModule } from './app-material.module';
     ClientsListComponent,
     ClientItemComponent,
     ClientDetailComponent,
-    ClientSearchComponent
+    ClientSearchComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
