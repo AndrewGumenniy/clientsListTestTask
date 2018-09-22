@@ -1,3 +1,28 @@
-<p>
-  client-detail works!
-</p>
+<div class="container client-detail" *ngIf="selectedClient;else unset">
+    <div class="left-column">  
+      <img [src]="selectedClient.avatar" alt="{{selectedClient.jobPosition}} - {{selectedClient.company}} avatar">
+    </div> 
+    <div class="right-column">
+      <h1>{{selectedClient.firstName}} {{selectedClient.lastName}}</h1>
+      <span class="job"><mat-icon>work</mat-icon><b>{{selectedClient.jobPosition}}</b> &nbsp; {{selectedClient.company}}</span>
+      <div class="contacts">
+        <h3>Contacts</h3>
+        <ul>  
+          <li title="phone"><mat-icon>phone_android</mat-icon>{{selectedClient.phone}}</li>
+          <li tutle="email"><mat-icon>email</mat-icon>{{selectedClient.email}}</li>
+        </ul>
+     </div>
+     <div class="adress">
+        <h3>Adress</h3>
+        <ul>
+          <li title="country"><mat-icon>location_on</mat-icon>{{selectedClient.country}}</li>
+          <li title="city"><mat-icon>location_city</mat-icon>{{selectedClient.city}}</li>
+          <li title="street"><mat-icon>streetview</mat-icon>{{selectedClient.street}}</li>
+          <li title="zip code"><mat-icon>drafts</mat-icon>{{selectedClient.zipCode}}</li>
+        </ul>
+     </div>
+    </div> 
+</div>
+<ng-template #unset>   
+  <h2 class="unset">Client not selected</h2>  
+</ng-template>

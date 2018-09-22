@@ -25,7 +25,7 @@ export class ClientsListDataService {
               lastName: client.general.lastName,
               avatar: client.general.avatar,
               company: client.job.company,
-              position: client.job.title,
+              jobPosition: client.job.title,
               email: client.contact.email,
               phone: client.contact.phone,
               street: client.address.street,

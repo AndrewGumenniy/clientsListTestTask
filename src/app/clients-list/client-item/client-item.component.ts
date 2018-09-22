@@ -8,6 +8,8 @@ import { Client } from '../../shared/client.model';
 })
 export class ClientItemComponent implements OnInit {
   @Input() clientData: Client;
+  @Input() selectedClient: Client;
+
   constructor() { }
 
   ngOnInit() {

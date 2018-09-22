@@ -1,0 +1,32 @@
+.container, .unset{
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+.client-detail .left-column{
+    flex:1;
+    text-align: center;
+}
+.client-detail .right-column{
+    flex:3;
+}
+
+.client-detail h1{
+    margin-bottom: 5px;
+}
+.client-detail .job{
+    color:darkgray;
+}
+.client-detail ul {
+    list-style: none;
+}
+.client-detail ul li, span{
+    display: flex;
+    flex-direction: row;
+}
+.client-detail .material-icons{
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 3px;
+    color:darkgray;
+}

@@ -9,6 +9,8 @@ import { Client } from '../shared/client.model';
 })
 export class ClientsListComponent implements OnInit {
   clients: Client[];
+  selectedClient: Client;
+
   constructor(private clientsDataSv: ClientsListDataService) { }
 
   ngOnInit() {
@@ -18,6 +20,10 @@ export class ClientsListComponent implements OnInit {
   getClients() {
     this.clientsDataSv.getClients()
     .subscribe(clients => this.clients = clients);
+  }
+
+  onSelect(client: Client): void {
+    this.selectedClient = client;
   }
 
 }

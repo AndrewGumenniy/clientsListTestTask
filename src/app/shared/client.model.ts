@@ -3,7 +3,7 @@ export class Client {
     public lastName: string;
     public avatar: string;
     public company: string;
-    public position: string;
+    public jobPosition: string;
     public email: string;
     public phone: number;
     public street: string;
