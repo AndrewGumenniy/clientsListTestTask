@@ -30,3 +30,17 @@
     margin-right: 3px;
     color:darkgray;
 }
+
+@media (max-width: 900px) {
+    .container {
+      padding: 20px 5px;
+      flex-direction: column;
+      text-align: center;
+    }   
+    .client-detail .job .material-icons{
+      display: none;
+    }
+    .client-detail .job{
+      flex-direction: column;
+    }
+}

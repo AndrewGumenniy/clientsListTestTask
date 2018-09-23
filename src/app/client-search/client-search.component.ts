@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from '../../../node_modules/rxjs';
 import { SearchService } from '../shared/search.service';
 
 @Component({

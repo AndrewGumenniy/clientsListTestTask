@@ -16,3 +16,9 @@ mat-list{
     padding-top: 0px;
     border-top: 1px solid rgba(0,0,0,.12);
 }
+
+@media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }  
+}

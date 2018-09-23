@@ -17,7 +17,6 @@ export class ClientsListDataService {
     return this.http.get('https://ng-clients-app.firebaseio.com/clients.json')
       .pipe(map(
         (clients: Client[]) => {
-          console.log(clients);
           const transformedData = Object.keys(clients).map(key => clients[key]);
           return transformedData.map(function(client: any) {
             return {

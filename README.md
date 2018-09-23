@@ -1,27 +1,35 @@
 # ClientsListTestTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Процесс решения по коммитам на гитхабе
 
-## Development server
+## 1. Init project and add basic components structure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Создал первичную структуру компонентов, компонет с детальной информацией о клиенте и одного клиента сделал подкомпонентами списка всех компонентов, так как у них один источник данных в json файле. Хотя можно было сделать и еще дробление с папкой Clients, а в ней Clients-list, Clients-item, Clients-detail.
 
-## Code scaffolding
+## 2. Add service for getting data and testing it
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Json файл выложил в Firebase и делаю get запрос из нее из сервиса, сделал обработку приходящего файла в самом сервисе с помощью map библиотеки RxJs, данные приводятся к виду модели клиента. И дальше уже в компоненте и шаблоне компонента нет лишней логики по обработке данных.
 
-## Build
+## 3. Сreate and styling clients-list and add ng-material-module
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Создал модуль для добавления отдельных модулей ng-material, сам модуль уже подключил в основной модуль, таким образом он становится чище, особенно если модулей ng-material будет много. 
 
-## Running unit tests
+Общение между Clients-list и Clients-item с помощью @input, Clients-list получает данные и раздает их на дочерние компоненты и так же следит за обновлениями и уведомляет дочерние.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 4. Сreate and styling client-detail component
 
-## Running end-to-end tests
+Подходящего компонента в Angular Material не нашел, поэтому стилизовал сам.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Активная вкладка и первичная надпись, когда клиент не выделен также осуществляется через общение с Clients-list
 
-## Further help
+## 5. Finiched search for all fields of client
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Передачу данных инпута в Clients-list реализовал через сервис с помощью Subject библиотеки RxJs. 
+
+Сам поиск по всем полям с помощью фильтра, который взял из примеров. Мне показалось, что фильтр уже полученных данных в данном случае лучше, чем запросы на сервер по каждому символу. 
+
+## 6. Final edits for styles and all files
+
+Ng lint файлы проходят, как и unit тесты, но это автоматически сформированные тесты SimonTest в Visual Studio Code.
+
+Также размсетил на gh-pages представление сборки.
